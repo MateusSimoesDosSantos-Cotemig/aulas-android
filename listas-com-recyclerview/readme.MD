@@ -182,8 +182,7 @@ class TelaActivity : AppCompatActivity() {
             delay(3000)
             Toast.makeText(this@MainActivity, "ola", Toast.LENGTH_SHORT).show()
         }
-
-		```
+```
 
 ## Adicionar clique a sua lista
 Para adicionar clique uma lista, pode ser usado uma high-order-function kotlin, para isso o construtor do adapter sofrerar uma pequena alteração.
