@@ -133,9 +133,9 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
     ...
 
-    val nome: String = intent.getStringExtra("nome") // "mateus"
+    val nome: String? = intent.getStringExtra("nome") // "mateus"
 
-    val idade: Int = intent.getIntExtra("idade") // 27
+    val idade: Int? = intent.getIntExtra("idade") // 27
 }
 ```
 
