@@ -219,14 +219,16 @@ Por fim a activity passa o bloco de código no momento da instancia do RecyclerV
 
 	recyclerViewConversas = findViewById(R.id.recyclerViewConversas)
 
-    recyclerViewConversas.adapter = AdapterConversas({
-        /*
-		bloco que sera executado no momento do clique
-		a variavel oculta it, é o valor passado dentro do método invoke,
-		lá no método onbind view holder
-		*/
-		Toast.makeText(this, "Olá $it", Toast.LENGTH_SHORT).show()
-	})
+    recyclerViewConversas.adapter = AdapterConversas(::aoClicarNaLista)
 
 ```	
+Definindo a função que será executado no momento do clique
+		a variavel *valor*, é o valor passado dentro do método invoke,
+		lá no método onbind view holder
 
+```kotlin
+
+fun aoClicarNaLista(valor: T) {
+    Toast.makeText(this, "Olá $valor", Toast.LENGTH_SHORT).show()
+}
+```
