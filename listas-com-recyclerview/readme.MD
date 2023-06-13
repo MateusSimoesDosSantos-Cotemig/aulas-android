@@ -188,10 +188,6 @@ class TelaActivity : AppCompatActivity() {
         que faz com que os itens sejam exibidos em formato de grid(coluans e linhas).
          */
         recyclerViewConversas.layoutManager = LinearLayoutManager(this)
-        lifecycleScope.launch {
-            delay(3000)
-            Toast.makeText(this@MainActivity, "ola", Toast.LENGTH_SHORT).show()
-        }
 ```
 
 ## Adicionar clique a sua lista
