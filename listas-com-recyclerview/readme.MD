@@ -63,6 +63,8 @@ O conteúdo que vai ser exibido na lista ele é gerenciado por uma classe *kotli
 Veja o exemplo de uma classe *Adapter* criada.
 
   ```kotlin
+  
+
 /*
 
 A classe criada ela deve estender de `RecyclerView.Adapter`, entre os símbolos de maior e menor deve conter a classe `ViewHolder` do seu *adapter*, no caso havia sido criado o `ConversaViewHolder`
@@ -71,12 +73,20 @@ A classe criada ela deve estender de `RecyclerView.Adapter`, entre os símbolos 
 
 class AdapterConversas : RecyclerView.Adapter<ConversaViewHolder>() {
 
+
+
+// Modelo base, para popular os dados da lista
+class Conversa(
+   var foto: Int,
+   var nome: String,
+   var conversa: String
+)
+
 /*
 
 Começando por declarar quais serão os dados da sua lista.
 
 */
-
 var conversas: List<Conversa> = listOf(
 
 Conversa(R.drawable.foto_joao, "Joao", "Como vai amigo?"),
