@@ -29,6 +29,7 @@ O layout do item deve ser um padrão por exemplo o layout abaixo:
 
 Para esse layout foi usado um componente de imagem como o `ImageView` para exibir a foto do contato. Também foram usados três componentes do tipo `TextView` um para o nome do contato, resumo da ultima conversa, e horário da ultima conversa.
 
+## Criar ViewHolder
 
 É necessario criar um ViewHolder para exibir a lista em um recyclerview, esse ViewHolder é uma classe em kotlin que representa o layout.
 
