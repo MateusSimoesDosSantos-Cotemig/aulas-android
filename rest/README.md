@@ -122,7 +122,7 @@ Aqui está o método definido em nossa interface `ViaCepApiService`:
 
 ```kotlin
 @GET("ws/{cep}/json")  
-fun getEndereco(@Path("cep") cep: String): Call<Endereco>
+fun getEndereco(@Path("cep") cep: String): retrofit2.Call<Endereco>
 ```
 
 Este método, chamado `getEndereco`, recebe um único parâmetro chamado `cep` e retorna um objeto `Endereco` correspondente ao CEP buscado. Esse `Endereco` é encapsulado no tipo `Call` do `Retrofit`.
@@ -144,11 +144,11 @@ val retrofitService : ViaCepAPIService by lazy {
 Dentro do método `onCreate`, fazemos referência ao objeto `retrofitService` e executamos o método getEndereco de nossa `ViaCepApiService`. A chamada é realizada pelo código a seguir:
 
 ```kotlin
-retrofitService.getEndereco("31748402").enqueue(object : Callback<Endereco> {  
+retrofitService.getEndereco("31748402").enqueue(object : retrofit2.Callback<Endereco> {  
     override fun onResponse(call: Call<Endereco>, response: Response<Endereco>) {  
         if(response.isSuccessful) {  
             var endereco: Endereco = response.body()!!  
-            Toast.makeText(this@MainActivity, endereco.localidade, Toast.LENGTH_SHORT).show()  
+            algumEditText.text = endereco.localidade
   
         } else {  
             Toast.makeText(this@MainActivity, "erro", Toast.LENGTH_SHORT).show()  
