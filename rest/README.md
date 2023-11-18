@@ -144,7 +144,7 @@ val retrofitService : ViaCepAPIService by lazy {
 Dentro do método `onCreate`, fazemos referência ao objeto `retrofitService` e executamos o método getEndereco de nossa `ViaCepApiService`. A chamada é realizada pelo código a seguir:
 
 ```kotlin
-retrofitService.getEndereco("31748402").enqueue(object : retrofit2.Callback<Endereco> {  
+retrofitService.getEndereco("30120060").enqueue(object : retrofit2.Callback<Endereco> {  
     override fun onResponse(call: Call<Endereco>, response: Response<Endereco>) {  
         if(response.isSuccessful) {  
             var endereco: Endereco = response.body()!!  
