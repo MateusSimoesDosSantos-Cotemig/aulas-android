@@ -49,7 +49,7 @@ No nosso caso, a URL base da nossa aplicação é https://viacep.com.br/. Portan
 
 
 ```kotlin
-private const val URL_BASE = "https://viacep.com.br/"
+private const val URL_BASE = "https://viacep.com.br/ws/"
 ```
 A seguir, você deve configurar o Builder do Retrofit. Esse Builder fornece a instância da classe Retrofit necessária para realizar chamadas à API Rest. Você pode fazer isso da seguinte maneira:
 
@@ -121,7 +121,7 @@ Agora que temos nossa classe definida, podemos voltar para nossa interface `ViaC
 Aqui está o método definido em nossa interface `ViaCepApiService`:
 
 ```kotlin
-@GET("ws/{cep}/json")  
+@GET("{cep}/json")  
 fun getEndereco(@Path("cep") cep: String): retrofit2.Call<Endereco>
 ```
 
