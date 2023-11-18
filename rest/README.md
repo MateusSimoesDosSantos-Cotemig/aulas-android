@@ -148,7 +148,7 @@ retrofitService.getEndereco("31748402").enqueue(object : retrofit2.Callback<Ende
     override fun onResponse(call: Call<Endereco>, response: Response<Endereco>) {  
         if(response.isSuccessful) {  
             var endereco: Endereco = response.body()!!  
-            algumEditText.text = endereco.localidade
+            textViewLocalidade.text = endereco.localidade
   
         } else {  
             Toast.makeText(this@MainActivity, "erro", Toast.LENGTH_SHORT).show()  
